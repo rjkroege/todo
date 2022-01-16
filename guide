@@ -1,0 +1,6 @@
+// Basics
+Edit X:todo/\+Errors: 1,$d
+X:todo/.*\.go: w
+
+go build   
+
