@@ -22,6 +22,13 @@ func main() {
 
 	if flag.NArg() > 0 {
 		log.Println("running with arguments so need to do something different")
+		tags, err := getTaskPaperTags(tpf)
+
+		if err != nil {
+			log.Fatalf("can't get tags from from %q: %v", tpf, err)
+		}
+
+		log.Println(tags)
 		return
 	}
 

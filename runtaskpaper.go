@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"path/filepath"
 	"os/exec"
+	"path/filepath"
 )
 
 func getTaskPaperFilePath(tpf string) (string, error) {
@@ -33,6 +33,6 @@ func runTaskPaper(tpf string) {
 
 	err := taskpapercmd.Run()
 	if err != nil {
-		log.Fatalf("todo can't open TaskPaper %q: %v", tpf , err)
+		log.Fatalf("todo can't open TaskPaper %q: %v", tpf, err)
 	}
 }
