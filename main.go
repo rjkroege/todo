@@ -3,16 +3,18 @@ package main
 import (
 	"flag"
 	"log"
+	"os"
+	"strings"
+	//	aw "github.com/deanishe/awgo"
 )
 
 var todofile = flag.String("todofile", "Documents/todo.taskpaper", "path to .taskpaper file")
+var actionflag = flag.Bool("action", false, "should we ")
 
 func main() {
-	log.Println("hello")
+	log.Println("hello", os.Args)
 
-	// Define arguments here
-
-	flag.Parse()
+	cmdname := os.Args[0]
 
 	tpf, err := getTaskPaperFilePath(*todofile)
 	if err != nil {
@@ -20,22 +22,24 @@ func main() {
 		log.Fatal(err)
 	}
 
-	if flag.NArg() > 0 {
-		log.Println("running with arguments so need to do something different")
-		tags, err := getTaskPaperTags(tpf)
+	if strings.HasSuffix(cmdname, "todo") {
+		log.Println("this is the query path")
 
-		if err != nil {
-			log.Fatalf("can't get tags from from %q: %v", tpf, err)
+		genAlfredResult(tpf, os.Args[1:])
+
+	} else {
+		log.Println("this is the action path")
+
+		if len(os.Args) == 1 {
+			log.Println("this is the action path, no args")
+			log.Println("running without arguments so need to just open TaskPaper")
+
+			runTaskPaper(tpf)
+		} else {
+			log.Println("running action path with arguments so need to prepend")
+			prependToTaskPaper(tpf, os.Args)
 		}
 
-		log.Println(tags)
-		return
 	}
-
-	log.Println("running without arguments so need to just open TaskPaper")
-
-	runTaskPaper(tpf)
-
-	// TODO(rjk): decide how I want to log for Alfred debugging?
 
 }

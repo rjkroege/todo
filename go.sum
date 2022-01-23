@@ -1,5 +1,10 @@
+github.com/felixge/goldy v0.0.0-20180710104658-ab8190c42fde h1:2A4Ujk9PLOTT78zNW+T8muLTjV35lHrd74sndE+H8iQ=
+github.com/felixge/goldy v0.0.0-20180710104658-ab8190c42fde/go.mod h1:L/F3y6q39ScJ4fWyUB1UrMIXwL5vvRCGLXJKwHRf6Sc=
 github.com/felixge/taskpaper v0.0.0-20181116140931-3d6cf67bc415 h1:x7u0RfY5w1TWp9L5c+MM/tSNDS2WtHoT7r8xasJfSPI=
 github.com/felixge/taskpaper v0.0.0-20181116140931-3d6cf67bc415/go.mod h1:o+ahheSER5cvritzzD1sWAp0sxsd4LYgjhhLk+6BnBY=
 github.com/google/go-cmp v0.5.6 h1:BKbKCqvP6I+rmFHt06ZmyQtvB8xAkWdhFyr0ZUNZcxQ=
 github.com/google/go-cmp v0.5.6/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
+github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
+github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543 h1:E7g+9GITq07hpfrRu66IVDexMakfv52eLZ2CXBWiKr4=
 golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543/go.mod h1:I/5z698sn9Ka8TeJc9MKroUUfqBBauWjQqLJ2OPfmY0=
