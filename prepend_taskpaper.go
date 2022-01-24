@@ -5,6 +5,5 @@ import (
 )
 
 func prependToTaskPaper(tpf string, message []string) {
-	log.Println("Append stuffs to the taskpaper here")
-
+	log.Printf("Append %#v to the taskpaper here", message)
 }

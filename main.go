@@ -30,19 +30,14 @@ func main() {
 		genAlfredResult(tpf, flag.Args())
 
 	} else {
-		log.Println("this is the action path")
-
-		// TODO(rjk): revisit this when I have the filter working correctly.
-		if len(os.Args) == 1 {
+		log.Printf("this is the action path. real args %#v args: %#v", os.Args, flag.Args())
+		if *actionflag {
 			log.Println("this is the action path, no args")
 			log.Println("running without arguments so need to just open TaskPaper")
 
 			runTaskPaper(tpf)
 		} else {
-			log.Println("running action path with arguments so need to prepend")
-			prependToTaskPaper(tpf, os.Args)
+			prependToTaskPaper(tpf, flag.Args())
 		}
-
 	}
-
 }
