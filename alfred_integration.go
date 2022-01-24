@@ -99,13 +99,13 @@ func genAlfredResult(tpf string, args []string) {
 		result.Items = append(result.Items, &Item{
 			// Uid:   "task",
 			Title: "Open TaskPaper",
-			Arg:   "-action",
+			Arg:   "-" + actionflagstring,
 		})
 	} else {
 		result.Items = append(result.Items, &Item{
 			// Uid:   "task",
 			Title: "Add " + finalarg,
-			Arg:   finalarg,
+			Arg:   "-" + prependflagstring + " " + finalarg,
 		})
 	}
 
