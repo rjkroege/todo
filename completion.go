@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 	"strings"
 	"unicode"
@@ -23,7 +22,7 @@ func recurse(item *taskpaper.Item, tags map[string]struct{}) {
 
 // getTaskPaperTags extracts the TaskPaper file tags from tpf.
 func getTaskPaperTags(tpf string) ([]string, error) {
-	log.Println("getting tags from", tpf)
+	// log.Println("getting tags from", tpf)
 
 	contents, err := os.ReadFile(tpf)
 	if err != nil {
@@ -36,7 +35,6 @@ func getTaskPaperTags(tpf string) ([]string, error) {
 	}
 
 	tags := make(map[string]struct{})
-
 	recurse(root, tags)
 
 	taglist := make([]string, 0, len(tags))

@@ -8,7 +8,7 @@ import (
 )
 
 func prependToTaskPaper(tpf string, message []string) {
-	log.Printf("Append %#v to the taskpaper here", message)
+	// log.Printf("Append %#v to the taskpaper here", message)
 
 	ofd, err := os.Open(tpf)
 	if err != nil {

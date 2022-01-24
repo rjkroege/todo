@@ -5,7 +5,6 @@ import (
 	"log"
 	"os"
 	"strings"
-	//	aw "github.com/deanishe/awgo"
 )
 
 const (
@@ -18,9 +17,7 @@ var actionflag = flag.Bool(actionflagstring, false, "run TaskPaper")
 var prependflag = flag.Bool(prependflagstring, false, "prepend args to TaskPaper file")
 
 func main() {
-	log.Printf("hello %#v", os.Args)
-
-	//	cmdname := os.Args[0]
+	// log.Printf("hello %#v", os.Args)
 
 	// Alfred doesn't parse arguments like the shell. So I have to split them
 	// apart here. Note that this will make it tedious to create a todo list
@@ -38,7 +35,6 @@ func main() {
 
 	tpf, err := getTaskPaperFilePath(*todofile)
 	if err != nil {
-		// TODO(rjk): some way to give up in a way that makes things helpful in Alfred.
 		log.Fatal(err)
 	}
 
