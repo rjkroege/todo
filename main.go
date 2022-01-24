@@ -16,6 +16,8 @@ func main() {
 
 	cmdname := os.Args[0]
 
+	flag.Parse()
+
 	tpf, err := getTaskPaperFilePath(*todofile)
 	if err != nil {
 		// TODO(rjk): some way to give up in a way that makes things helpful in Alfred.
@@ -25,11 +27,12 @@ func main() {
 	if strings.HasSuffix(cmdname, "todo") {
 		log.Println("this is the query path")
 
-		genAlfredResult(tpf, os.Args[1:])
+		genAlfredResult(tpf, flag.Args())
 
 	} else {
 		log.Println("this is the action path")
 
+		// TODO(rjk): revisit this when I have the filter working correctly.
 		if len(os.Args) == 1 {
 			log.Println("this is the action path, no args")
 			log.Println("running without arguments so need to just open TaskPaper")

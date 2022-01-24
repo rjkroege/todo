@@ -4,3 +4,5 @@ X:todo/.*\.go: w
 
 go build   
 
+./todo abcd
+./todo abcd @due
