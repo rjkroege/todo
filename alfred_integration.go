@@ -96,7 +96,7 @@ func genAlfredResult(tpf string, args []string) {
 }
 
 type Item struct {
-	Uid          string `json:"uid"`
+	Uid          string `json:"uid,omitempty"`
 	Title        string `json:"title"`
 	Subtitle     string `json:"subtitle,omitempty"`
 	Arg          string `json:"arg"`
